@@ -2,6 +2,8 @@
 
 > React port of [Fireship-IO stacked card list](https://github.com/fireship-io/stacked-card-list)
 
+Checkout the [live Version](https://hyde46.github.io/react-stacked-card-list/)
+
 [![NPM](https://img.shields.io/npm/v/react-stacked-card-list.svg)](https://www.npmjs.com/package/react-stacked-card-list) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
