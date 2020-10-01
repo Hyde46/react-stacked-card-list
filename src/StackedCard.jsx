@@ -20,10 +20,6 @@ class StackedCard extends Component {
     width: 400
   }
 
-  componentDidMount() {
-    this.setState({ avatarId: this.props.author })
-  }
-
   chompString(stringToChomp) {
     const chomped = stringToChomp.substring(0, this.props.maxTextChars)
     if (chomped.length >= this.props.maxTextChars) {
