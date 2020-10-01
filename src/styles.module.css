@@ -1,28 +1,28 @@
 /* add css module styles here (optional) */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&display=swap');
 
-.stackedCardList {
+.rsclCardList {
   display: flex;
   padding: 1rem;
   overflow-x: scroll;
 }
 
-.stackedCardList::-webkit-scrollbar {
+.rsclCardList::-webkit-scrollbar {
   width: 10px;
   height: 10px;
 }
-.stackedCardList::-webkit-scrollbar-thumb {
+.rsclCardList::-webkit-scrollbar-thumb {
   background: #201c29;
   border-radius: 10px;
   box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, 0.25),
     inset -2px -2px 2px rgba(0, 0, 0, 0.25);
 }
 
-.stackedCardList::-webkit-scrollbar-track {
+.rsclCardList::-webkit-scrollbar-track {
   background: linear-gradient(90deg, #201c29, #201c29 1px, #17141d 0, #17141d);
 }
 
-.stackedCard {
+.rsclCard {
   height: 90%;
   min-width: 250px;
   padding: 1.5rem;
@@ -38,30 +38,30 @@
   position: relative;
 }
 
-.stackedCard:focus-within ~ .card,
-.stackedCard:hover ~ .card {
+.rsclCard:focus-within ~ .rsclCard,
+.rsclCard:hover ~ .rsclCard {
   transform: translateX(130px);
 }
 
-.stackedCard:hover {
+.rsclCard:hover {
   transform: translateY(-1rem);
 }
 
-.stackedCard:not(:first-child) {
+.rsclCard:not(:first-child) {
   margin-left: -130px;
 }
 
-.stackedCardHeader {
+.rsclCardHeader {
   margin-bottom: auto;
 }
 
-.stackedCardHeader p {
+.rsclCardHeader p {
   font-size: 14px;
   margin: 0 0 1rem;
   color: #7a7a8c;
 }
 
-.stackedCardHeader h2 {
+.rsclCardHeader h2 {
   font-size: 1.1rem;
   margin: 0.25rem 0 auto;
   text-decoration: none;
@@ -70,7 +70,7 @@
   display: inline-block;
 }
 
-.stackedCardHeader h2:hover {
+.rsclCardHeader h2:hover {
   background: linear-gradient(90deg, #ff8a00, #e52e71);
   text-shadow: none;
   -webkit-text-fill-color: transparent;
@@ -78,7 +78,7 @@
   background-clip: text;
 }
 
-.stackedCardAuthor {
+.rsclCardAuthor {
   margin: 3rem 0 0;
   display: grid;
   grid-template-columns: 75px 1fr;
