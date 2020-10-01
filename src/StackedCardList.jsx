@@ -1,25 +1,31 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import styles from './styles.module.css';
+import styles from './styles.module.css'
 
 class StackedCardList extends Component {
+  static propTypes = {
+    /** List of `<StackedCard/>`  components */
+    stackedCards: PropTypes.object,
+    height: PropTypes.number
+  }
 
-    static propTypes = {
-        /** List of `<StackedCard/>`  component */
-        stackedCards: PropTypes.object
-    }
-    render() {
-        const {
-            stackedCards
-        } = this.props;
-        return (
-            <div className={styles}>
-                <section class={styles.cardList}>
-                    {stackedCards}
-                </section>
-            </div>)
-    }
+  static defaultProps = {
+    height: 400
+  }
 
+  render() {
+    const { stackedCards, height } = this.props
+    const propStyles = {
+      height: height
+    }
+    return (
+      <div>
+        <section className={styles.cardList} style={propStyles}>
+          {stackedCards}
+        </section>
+      </div>
+    )
+  }
 }
 
-export default StackedCardList;
+export default StackedCardList
