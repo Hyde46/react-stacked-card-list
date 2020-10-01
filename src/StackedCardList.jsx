@@ -20,7 +20,7 @@ class StackedCardList extends Component {
     }
     return (
       <div>
-        <section className={styles.cardList} style={propStyles}>
+        <section className={styles.stackedCardList} style={propStyles}>
           {stackedCards}
         </section>
       </div>

@@ -59,13 +59,13 @@ class StackedCard extends Component {
       )
     }
     return (
-      <article className={styles.card} style={propStyles}>
-        <header className={styles.cardHeader}>
+      <article className={styles.stackedCard} style={propStyles}>
+        <header className={styles.stackedCardHeader}>
           <p>{header}</p>
           <h2>{this.chompString(text)}</h2>
         </header>
 
-        <div className={styles.cardAuthor}>
+        <div className={styles.stackedCardAuthor}>
           {adorableIcon}
           <div className={styles.authorName}>
             <div className={styles.authorNamePrefix}>{authorPrefix}</div>
