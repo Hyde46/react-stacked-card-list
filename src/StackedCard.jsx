@@ -11,7 +11,8 @@ class StackedCard extends Component {
     hasAdorableIcon: PropTypes.bool,
     tags: PropTypes.object,
     maxTextChars: PropTypes.number,
-    width: PropTypes.number
+    width: PropTypes.number,
+    style: PropTypes.object
   }
 
   static defaultProps = {
@@ -36,13 +37,15 @@ class StackedCard extends Component {
       authorPrefix,
       hasAdorableIcon,
       tags,
-      width
+      width,
+      style
     } = this.props
 
     const propStyles = {
       width: width
     }
 
+    var combinedPropStyles = Object.assign({}, propStyles, style)
     let adorableIcon
     if (hasAdorableIcon) {
       adorableIcon = (
@@ -59,7 +62,7 @@ class StackedCard extends Component {
       )
     }
     return (
-      <article className={styles.rsclCard} style={propStyles}>
+      <article className={styles.rsclCard} style={combinedPropStyles}>
         <header className={styles.rsclCardHeader}>
           <p>{header}</p>
           <h2>{this.chompString(text)}</h2>
