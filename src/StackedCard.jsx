@@ -10,13 +10,13 @@ class StackedCard extends Component {
     authorPrefix: PropTypes.string,
     hasAdorableIcon: PropTypes.bool,
     tags: PropTypes.object,
-    textLength: PropTypes.number,
+    maxTextChars: PropTypes.number,
     width: PropTypes.number
   }
 
   static defaultProps = {
     hasAdorableIcon: false,
-    textLength: 139,
+    maxTextChars: 139,
     width: 400
   }
 
@@ -25,8 +25,8 @@ class StackedCard extends Component {
   }
 
   chompString(stringToChomp) {
-    const chomped = stringToChomp.substring(0, this.props.textLength)
-    if (chomped.length >= this.props.textLength) {
+    const chomped = stringToChomp.substring(0, this.props.maxTextChars)
+    if (chomped.length >= this.props.maxTextChars) {
       return chomped + '...'
     }
     return chomped
