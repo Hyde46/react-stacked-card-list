@@ -6,21 +6,24 @@ class StackedCardList extends Component {
   static propTypes = {
     /** List of `<StackedCard/>`  components */
     stackedCards: PropTypes.object,
-    height: PropTypes.number
+    height: PropTypes.number,
+    style: PropTypes.object
   }
 
   static defaultProps = {
-    height: 400
+    height: 400,
+    style: {}
   }
 
   render() {
-    const { stackedCards, height } = this.props
+    const { stackedCards, height, style } = this.props
     const propStyles = {
       height: height
     }
+    var combinedPropStyles = Object.assign({}, propStyles, style)
     return (
       <div>
-        <section className={styles.rsclCardList} style={propStyles}>
+        <section className={styles.rsclCardList} style={combinedPropStyles}>
           {stackedCards}
         </section>
       </div>
