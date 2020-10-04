@@ -21,6 +21,9 @@ import { StackedCardList, StackedCard } from 'react-stacked-card-list'
 import 'react-stacked-card-list/dist/index.css'
 
 const App = () => {
+  /**
+  * <rendered tag string> : <link>
+  */
   let tags = {
     GitHub: 'https://github.com/Hyde46/react-stacked-card-list',
     SomeTag: '#'
